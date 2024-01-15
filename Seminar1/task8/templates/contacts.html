@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block tittle %}
+    Contacts
+{% endblock %}
+
+{% block content %}
+<table>
+    {% for stud in stud_list %}
+    <tr>
+        <td>{{ stud.firstname }}</td>
+        <td>{{ stud.lastname }}</td>
+        <td>{{ stud.age }}</td>
+        <td>{{ stud.number }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock%}

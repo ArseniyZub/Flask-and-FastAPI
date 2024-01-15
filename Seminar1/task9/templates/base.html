@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Online Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Online Store</h1>
+        {% block header %}
+            Clothes           
+        {% endblock %}
+        <nav>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Products</h2>
+        <div class="products">
+            <div class="product">
+                {% block content1 %}
+                    <h3>Product 1</h3>
+                    <p>$150.00</p>
+                    <p>Information about Product 1...</p>
+                {% endblock %} 
+                <button>Add to Basket</button>
+            </div>
+
+            <div class="product">
+                {% block content2 %}
+                    <h3>Product 2</h3>
+                    <p>$123.00</p>
+                    <p>Information about Product 2...</p>
+                {% endblock %} 
+                <button>Add to Basket</button>
+            </div>
+        </div>
+    </main>
+
+    <footer style="position: fixed; bottom: 0; left: 0;">
+        <p>&copy; 2024 My Online Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
